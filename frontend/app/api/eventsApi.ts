@@ -1,35 +1,38 @@
 'use server';
 
+import axios from 'axios';
 import { SystemEvent, EventsFilters } from '../types/event';
 
 const BASE_URL = process.env.NEXT_PUBLIC_EVENTS_BASE_URL || 'http://localhost:3000/events';
 
 /**
- * Server Action: fetch events from API with filters
+ * Server Action: fetch events from API with filters using Axios
  * @param filters EventsFilters object
  * @returns SystemEvent[]
  */
 export async function fetchEventsAction(filters: EventsFilters = {}): Promise<SystemEvent[]> {
   try {
-    const params = new URLSearchParams();
+    const params = Object.fromEntries(
+      Object.entries({
+        fromDate: filters.fromDate,
+        toDate: filters.toDate,
+        minLevel: filters.minLevel,
+      }).filter(([_, value]) => value !== undefined && value !== null)
+    );
 
-    if (filters.fromDate) params.append('fromDate', filters.fromDate);
-    if (filters.toDate) params.append('toDate', filters.toDate);
-    if (filters.minLevel !== undefined) params.append('minLevel', String(filters.minLevel));
-
-    const response = await fetch(`${BASE_URL}?${params.toString()}`, {
-      cache: 'no-store',
+    const response = await axios.get<SystemEvent[]>(BASE_URL, {
+      params,
+      headers: {
+        'Cache-Control': 'no-store',
+      },
     });
 
-    if (!response.ok) {
-      const text = await response.text();
-      throw new Error(`Failed to fetch events: ${response.status} ${text}`);
-    }
-
-    const data: SystemEvent[] = await response.json();
-    return data;
+    return response.data;
   } catch (error: unknown) {
-    if (error instanceof Error) {
+    if (axios.isAxiosError(error)) {
+      console.error('Server Action fetchEventsAction Axios error:', error.message);
+      throw new Error(`Failed to fetch events: ${error.response?.status} ${error.response?.data || ''}`);
+    } else if (error instanceof Error) {
       console.error('Server Action fetchEventsAction error:', error.message);
       throw error;
     } else {
