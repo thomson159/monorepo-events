@@ -1,10 +1,10 @@
 'use client';
 // Client Component: handles dynamic filters and updates table (CSR)
 import { useState } from 'react';
-import { EventsFilters, fetchEvents } from './api/eventsApi';
 import { EventsTable } from './components/EventsTable';
 import { Filters } from './components/Filters';
-import { SystemEvent } from './types/event';
+import { EventsFilters, SystemEvent } from './types/event';
+import { fetchEventsAction } from './api/eventsApi';
 
 interface Props {
   initialEvents: SystemEvent[];
@@ -17,7 +17,7 @@ export default function EventsClient({ initialEvents }: Props) {
   const handleFilterChange = async (filters: EventsFilters) => {
     setLoading(true);
     try {
-      const filtered = await fetchEvents(filters);
+      const filtered = await fetchEventsAction(filters);
       setEvents(filtered);
     } finally {
       setLoading(false);

@@ -1,6 +1,6 @@
 // Server Component: fetchEvents() executes on the server
 // HTML returned already contains the initial event list (SSR)
-import { fetchEvents } from "./api/eventsApi";
+import { fetchEventsAction } from "./api/eventsApi";
 import EventsClient from "./EventsClient";
 import { SystemEvent } from "./types/event";
 
@@ -8,7 +8,7 @@ export default async function Home() {
   let initialEvents = [] as SystemEvent[];
 
   try {
-    initialEvents = await fetchEvents({});
+    initialEvents = await fetchEventsAction({});
   } catch (error: unknown) {
     if (error instanceof Error) {
       console.error("Failed to fetch events:", error.message);

@@ -11,3 +11,9 @@ export interface SystemEvent {
   message: string;
   timestamp: string;
 }
+
+export interface EventsFilters {
+  fromDate?: string;
+  toDate?: string;
+  minLevel?: number;
+}
