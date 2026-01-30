@@ -15,6 +15,8 @@ export default function EventsClient({ initialEvents }: Props) {
   const [loading, setLoading] = useState(false);
 
   const handleFilterChange = async (filters: EventsFilters) => {
+    if (loading) return;
+
     setLoading(true);
     try {
       const filtered = await fetchEventsAction(filters);
