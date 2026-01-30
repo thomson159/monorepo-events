@@ -5,7 +5,7 @@ import { GetEventsDto } from './dto/get-events.dto';
 
 @Injectable()
 export class EventsService {
-  private events: SystemEvent[] = [
+  private readonly events: SystemEvent[] = [
     {
       id: '1',
       level: EventLevel.INFO,
@@ -27,19 +27,16 @@ export class EventsService {
   ];
 
   getEvents(filters: GetEventsDto): SystemEvent[] {
+    const fromDate = filters.fromDate ? new Date(filters.fromDate) : undefined;
+    const toDate = filters.toDate ? new Date(filters.toDate) : undefined;
+    const minLevel = filters.minLevel
+      ? (Number(filters.minLevel) as EventLevel)
+      : undefined;
+
     return this.events.filter((event) => {
-      if (filters.fromDate && event.timestamp < new Date(filters.fromDate)) {
-        return false;
-      }
-
-      if (filters.toDate && event.timestamp > new Date(filters.toDate)) {
-        return false;
-      }
-
-      if (filters.minLevel && event.level < filters.minLevel) {
-        return false;
-      }
-
+      if (fromDate && event.timestamp < fromDate) return false;
+      if (toDate && event.timestamp > toDate) return false;
+      if (minLevel !== undefined && event.level < minLevel) return false;
       return true;
     });
   }

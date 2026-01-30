@@ -2,7 +2,7 @@
 
 This monorepo contains both the **frontend** and **backend** of a web application.
 
-- **Frontend:** React 19, React Router 7, Vite, TailwindCSS
+- **Frontend:** React 19, Next 16, TailwindCSS
 - **Backend:** NestJS 11, TypeScript, Swagger
 
 `node >= v22`
@@ -22,100 +22,15 @@ I use:
 └─ README.md
 ```
 
----
+# ⚠️ Frontend
 
-## Frontend
-
-The frontend is built with **React** and **React Router**, bundled using **Vite**, and styled with **TailwindCSS**.
-
-### Installation
-
-```bash
-cd frontend
-npm install
-```
-
-### Scripts
-
-| Script              | Description                                                    |
-| ------------------- | -------------------------------------------------------------- |
-| `npm run dev`       | Runs the frontend in development mode                          |
-| `npm run build`     | Builds the production-ready application                        |
-| `npm run start`     | Serves the built application (`./build/server/index.js`)       |
-| `npm run typecheck` | Generates React Router types and runs TypeScript type checking |
-
-### Dependencies
-
-- `react`, `react-dom` – React libraries
-- `react-router` – Routing
-- `@react-router/serve` and `@react-router/node` – SSR support
-- `tailwindcss` – Styling framework
-
----
-
-## Backend
-
-The backend is built with **NestJS** and TypeScript, with **Swagger** support.
-
-### Installation
-
-```bash
-cd backend
-npm install
-```
-
-### Scripts
-
-| Script               | Description                      |
-| -------------------- | -------------------------------- |
-| `npm run start`      | Runs the backend application     |
-| `npm run start:dev`  | Development mode with hot-reload |
-| `npm run start:prod` | Production mode (`dist/main.js`) |
-| `npm run build`      | Builds the backend application   |
-| `npm run lint`       | Runs ESLint for code linting     |
-| `npm run format`     | Formats code using Prettier      |
-| `npm run test`       | Runs unit tests                  |
-| `npm run test:watch` | Runs tests in watch mode         |
-| `npm run test:cov`   | Runs tests with coverage report  |
-| `npm run test:e2e`   | Runs end-to-end tests            |
-
-### Dependencies
-
-- `@nestjs/common`, `@nestjs/core`, `@nestjs/platform-express` – NestJS framework
-- `class-validator`, `class-transformer` – DTO validation
-- `swagger-ui-express`, `@nestjs/swagger` – API documentation
-
----
-
-## Running the Full Project
-
-From the root of the monorepo:
-
-### Frontend
-
-```bash
-cd frontend
-npm run dev
-```
-
-Frontend will be available at `http://localhost:5173` (default Vite port).
-
-### Backend
-
-```bash
-cd backend
-npm run start:dev
-```
-
-Backend will be available at `http://localhost:3000`.
-
-> You can run both services simultaneously in separate terminals.
+Illustrates the key differences between server-side rendering (SSR) and client-side rendering (CSR).
 
 ---
 
 ## Technologies
 
-- **Frontend:** React, React Router, Vite, TailwindCSS
+- **Frontend:** React, Next, TailwindCSS
 - **Backend:** NestJS, Swagger, TypeScript
 - **Testing:** Jest, Supertest
 - **Lint/Format:** ESLint, Prettier
@@ -124,6 +39,19 @@ Backend will be available at `http://localhost:3000`.
 
 ## Tips
 
-- React Router types are generated with `npm run typecheck`
 - Swagger for the backend is accessible after running NestJS (e.g., `http://localhost:3000/api`)
 - For new developers, it's recommended to start the backend first, then the frontend.
+
+## Team members
+
+[@thomson159](https://github.com/thomson159)
+
+# ⚠️ Feel free to explore my other projects as well, which follow a similar approach but are built with different frameworks.
+
+The frontend of this project is built with Vite, and React Router. Not fully polished, and includes many experiments and iterations I tried while developing this project.
+
+https://github.com/thomson159/sales-dashboard
+
+A simple backend for a POS application. Stack: Express + TS, PostgreSQL, JWT, TSOA + Swagger.
+
+https://github.com/thomson159/pos-backend

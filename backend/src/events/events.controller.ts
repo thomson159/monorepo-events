@@ -1,7 +1,8 @@
 import { Controller, Get, Query } from '@nestjs/common';
-import { ApiQuery, ApiTags } from '@nestjs/swagger';
+import { ApiTags, ApiQuery } from '@nestjs/swagger';
 import { EventsService } from './events.service';
 import { GetEventsDto } from './dto/get-events.dto';
+import { EventLevel } from './enums/event-level.enum';
 
 @ApiTags('events')
 @Controller('events')
@@ -14,10 +15,10 @@ export class EventsController {
   @ApiQuery({
     name: 'minLevel',
     required: false,
-    enum: [1, 2, 3, 4],
-    description: '1=DEBUG, 2=INFO, 3=WARNING, 4=ERROR',
+    enum: EventLevel,
+    description: 'Minimal event level (1=DEBUG, 2=INFO, 3=WARNING, 4=ERROR)',
   })
-  getEvents(@Query() query: GetEventsDto) {
-    return this.eventsService.getEvents(query);
+  getEvents(@Query() filters: GetEventsDto) {
+    return this.eventsService.getEvents(filters);
   }
 }
