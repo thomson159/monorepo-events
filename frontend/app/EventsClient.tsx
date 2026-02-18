@@ -1,5 +1,5 @@
 'use client';
-// Client Component: handles dynamic filters and updates table (CSR)
+
 import { useState } from 'react';
 import { EventsTable } from './components/EventsTable';
 import { Filters } from './components/Filters';

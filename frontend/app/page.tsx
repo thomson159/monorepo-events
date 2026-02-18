@@ -1,26 +1,22 @@
-// Server Component: fetchEvents() executes on the server
-// HTML returned already contains the initial event list (SSR)
-import { fetchEventsAction } from "./api/eventsApi";
-import EventsClient from "./EventsClient";
-import { SystemEvent } from "./types/event";
+import EnergyBillClient from "./EnergyBillClient";
+import EnergyCostClient from "./EnergyCostClient";
 
-export default async function Home() {
-  let initialEvents = [] as SystemEvent[];
-
-  try {
-    initialEvents = await fetchEventsAction({});
-  } catch (error: unknown) {
-    if (error instanceof Error) {
-      console.error("Failed to fetch events:", error.message);
-    } else {
-      console.error("Unknown error fetching events", error);
-    }
-  }
+export default function Home() {
+  const previousReading = 1500;
+  const currentReading = 1550;
+  const currency = "EUR";
 
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold mb-4">System Events</h1>
-      <EventsClient initialEvents={initialEvents} />
+    <div className="p-8 bg-gray-50 dark:bg-gray-900 min-h-screen">
+      <h1 className="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-100">
+        Energy Dashboard
+      </h1>
+      <EnergyBillClient />
+      <EnergyCostClient
+        previousReadingKwh={previousReading}
+        currentReadingKwh={currentReading}
+        currency={currency}
+      />
     </div>
   );
 }
