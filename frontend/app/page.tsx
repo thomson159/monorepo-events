@@ -1,4 +1,4 @@
-import EnergyBillClient from "./EnergyBillClient";
+import EnergyBill from "./EnergyBill";
 import EnergyCostClient from "./EnergyCostClient";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       <h1 className="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-100">
         Energy Dashboard
       </h1>
-      <EnergyBillClient />
+      <EnergyBill />
       <EnergyCostClient
         previousReadingKwh={previousReading}
         currentReadingKwh={currentReading}

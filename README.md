@@ -3,7 +3,8 @@
 This monorepo contains both the **frontend** and **backend** of a web application.
 
 - **Frontend:** React 19, Next 16, TailwindCSS
-- **Backend:** NestJS 11, TypeScript, Swagger
+- **Backend #1:** NestJS 11, TypeScript, Swagger (backend/rest)
+- **Backend #2:** .NET 8, Graft (backend/dotnet-service)
 
 `node >= v22`
 
@@ -18,7 +19,9 @@ I use:
 /monorepo-root
 │
 ├─ frontend/       # Frontend application
-├─ backend/        # Backend application
+├─ backend/
+│   ├─ rest/   # NestJS + TypeScript
+│   └─ dotnet-service/ # .NET 8, Graft
 └─ README.md
 ```
 
@@ -31,7 +34,8 @@ Illustrates the key differences between server-side rendering (SSR) and client-s
 ## Technologies
 
 - **Frontend:** React, Next, TailwindCSS
-- **Backend:** NestJS, Swagger, TypeScript
+- **Backend 1:** NestJS, Swagger, TypeScript
+- **Backend 2:** .NET 8, Graft
 - **Testing:** Jest, Supertest
 - **Lint/Format:** ESLint, Prettier
 
