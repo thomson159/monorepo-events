@@ -1,0 +1,49 @@
+## .NET ##
+*.dll
+*.exe
+*.pdb
+*.cache
+*.mdb
+*.log
+*.vspscc
+*.vssscc
+
+# Build folders
+bin/
+obj/
+publish/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+.vscode/
+
+# Rider IDE
+.idea/
+*.iml
+
+# NuGet
+*.nupkg
+packages/
+project.lock.json
+*.nuget.props
+*.nuget.targets
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Python / Graft (if any Python artifacts)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Docker
+*.dockerignore
+docker-compose.override.yml
