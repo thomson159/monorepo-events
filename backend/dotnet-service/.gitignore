@@ -1,3 +1,10 @@
+Binaries.zip
+Binaries/
+GMA.zip
+GMA/
+GVFE.zip
+GVFE/
+
 ## .NET ##
 *.dll
 *.exe

@@ -1,0 +1,7 @@
+2026-02-19 14:50:52	Thread ID: 129524262777472	System.IO.FileNotFoundException: Library file /home/embe/Desktop/monorepo-events/backend/dotnet-service/bin/Release/net8.0/MyEnergyService.dll does not exist
+
+2026-02-19 14:53:57	Thread ID: 128430119535232	Javonet.Netcore.Utils.Exceptions.AssemblyLoadException: Failed to load assembly: /home/embe/Desktop/monorepo-events/backend/dotnet-service/./GMA/netcore/ModuleAnalyzer.Core.dll
+Check if .NET is installed in the same or newer version as the library was compiled with.
+Error: Could not load file or assembly 'System.Runtime, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The system cannot find the file specified.
+
+
