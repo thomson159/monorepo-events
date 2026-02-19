@@ -5,3 +5,27 @@ Check if .NET is installed in the same or newer version as the library was compi
 Error: Could not load file or assembly 'System.Runtime, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The system cannot find the file specified.
 
 
+2026-02-19 15:00:07	Thread ID: 133498193384064	Javonet.Netcore.Utils.Exceptions.AssemblyLoadException: Failed to load assembly: /home/embe/Desktop/monorepo-events/backend/dotnet-service/./GMA/netcore/ModuleAnalyzer.Core.dll
+Check if .NET is installed in the same or newer version as the library was compiled with.
+Error: Could not load file or assembly 'System.Runtime, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The system cannot find the file specified.
+
+
+2026-02-19 15:02:08	Thread ID: 137181262787200	Javonet.Netcore.Utils.Exceptions.AssemblyLoadException: Failed to load assembly: /home/embe/Desktop/monorepo-events/backend/dotnet-service/./GMA/netcore/ModuleAnalyzer.Core.dll
+Check if .NET is installed in the same or newer version as the library was compiled with.
+Error: Could not load file or assembly 'System.Runtime, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The system cannot find the file specified.
+
+
+2026-02-19 15:03:31	Thread ID: 125166183576192	Javonet.Netcore.Utils.Exceptions.AssemblyLoadException: Failed to load assembly: /home/embe/Desktop/monorepo-events/backend/dotnet-service/./GMA/netcore/ModuleAnalyzer.Core.dll
+Check if .NET is installed in the same or newer version as the library was compiled with.
+Error: Could not load file or assembly 'System.Runtime, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. The system cannot find the file specified.
+
+
+2026-02-19 15:16:04	Thread ID: 137890752111232	System.IO.FileNotFoundException: Could not find assembly 'System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e'. Either explicitly load this assembly using a method such as LoadFromAssemblyPath() or use a MetadataAssemblyResolver that returns a valid assembly.
+System.Reflection.TypeLoading.CoreTypes..ctor() in undefined line 0
+System.Reflection.MetadataLoadContext..ctor() in undefined line 0
+ModuleAnalyzer.Core.Analysis.LibraryAnalyzer.PrepareLoadContext() in C:\DEV\GRAFTCODE\graftcode-module-analyzer\src\netcore\ModuleAnalyzer.Core\Analysis\LibraryAnalyzer.cs line 108
+ModuleAnalyzer.Core.Analysis.LibraryAnalyzer.AnalyzeLibrary() in C:\DEV\GRAFTCODE\graftcode-module-analyzer\src\netcore\ModuleAnalyzer.Core\Analysis\LibraryAnalyzer.cs line 56
+ModuleAnalyzer.Core.Handler.ModuleAnalyzerLocal.AnalyzeLocal() in C:\DEV\GRAFTCODE\graftcode-module-analyzer\src\netcore\ModuleAnalyzer.Core\Handler\ModuleAnalyzerLocal.cs line 48
+System.RuntimeMethodHandle.InvokeMethod() in undefined line 0
+System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs() in undefined line 0
+

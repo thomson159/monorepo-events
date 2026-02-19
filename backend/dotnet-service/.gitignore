@@ -4,7 +4,9 @@ GMA.zip
 GMA/
 GVFE.zip
 GVFE/
+
 uploads/
+packages-microsoft-prod.deb
 
 ## .NET ##
 *.dll
