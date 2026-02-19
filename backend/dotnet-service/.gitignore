@@ -7,6 +7,7 @@ GVFE/
 
 uploads/
 packages-microsoft-prod.deb
+dotnet-sdk-9.0.100-linux-x64.tar.gz
 
 ## .NET ##
 *.dll

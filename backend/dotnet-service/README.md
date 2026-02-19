@@ -83,8 +83,6 @@ CMD ["gg", "--modules", "/usr/app/MyEnergyService.dll"]
 
 ## Running GG Locally
 
-# ⚠️ dotnet --version 9.0.311
-
 For testing, you can run GG with an example project key and specify the module:
 
 ```bash

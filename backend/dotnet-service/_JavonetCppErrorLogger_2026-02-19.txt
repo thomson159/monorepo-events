@@ -29,3 +29,30 @@ ModuleAnalyzer.Core.Handler.ModuleAnalyzerLocal.AnalyzeLocal() in C:\DEV\GRAFTCO
 System.RuntimeMethodHandle.InvokeMethod() in undefined line 0
 System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs() in undefined line 0
 
+2026-02-19 15:25:59	Thread ID: 134536823403136	System.IO.FileNotFoundException: Could not find assembly 'System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e'. Either explicitly load this assembly using a method such as LoadFromAssemblyPath() or use a MetadataAssemblyResolver that returns a valid assembly.
+System.Reflection.TypeLoading.CoreTypes..ctor() in undefined line 0
+System.Reflection.MetadataLoadContext..ctor() in undefined line 0
+ModuleAnalyzer.Core.Analysis.LibraryAnalyzer.PrepareLoadContext() in C:\DEV\GRAFTCODE\graftcode-module-analyzer\src\netcore\ModuleAnalyzer.Core\Analysis\LibraryAnalyzer.cs line 108
+ModuleAnalyzer.Core.Analysis.LibraryAnalyzer.AnalyzeLibrary() in C:\DEV\GRAFTCODE\graftcode-module-analyzer\src\netcore\ModuleAnalyzer.Core\Analysis\LibraryAnalyzer.cs line 56
+ModuleAnalyzer.Core.Handler.ModuleAnalyzerLocal.AnalyzeLocal() in C:\DEV\GRAFTCODE\graftcode-module-analyzer\src\netcore\ModuleAnalyzer.Core\Handler\ModuleAnalyzerLocal.cs line 48
+System.RuntimeMethodHandle.InvokeMethod() in undefined line 0
+System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs() in undefined line 0
+
+2026-02-19 15:27:50	Thread ID: 137828556546688	System.IO.FileNotFoundException: Could not find assembly 'System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e'. Either explicitly load this assembly using a method such as LoadFromAssemblyPath() or use a MetadataAssemblyResolver that returns a valid assembly.
+System.Reflection.TypeLoading.CoreTypes..ctor() in undefined line 0
+System.Reflection.MetadataLoadContext..ctor() in undefined line 0
+ModuleAnalyzer.Core.Analysis.LibraryAnalyzer.PrepareLoadContext() in C:\DEV\GRAFTCODE\graftcode-module-analyzer\src\netcore\ModuleAnalyzer.Core\Analysis\LibraryAnalyzer.cs line 108
+ModuleAnalyzer.Core.Analysis.LibraryAnalyzer.AnalyzeLibrary() in C:\DEV\GRAFTCODE\graftcode-module-analyzer\src\netcore\ModuleAnalyzer.Core\Analysis\LibraryAnalyzer.cs line 56
+ModuleAnalyzer.Core.Handler.ModuleAnalyzerLocal.AnalyzeLocal() in C:\DEV\GRAFTCODE\graftcode-module-analyzer\src\netcore\ModuleAnalyzer.Core\Handler\ModuleAnalyzerLocal.cs line 48
+System.RuntimeMethodHandle.InvokeMethod() in undefined line 0
+System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs() in undefined line 0
+
+2026-02-19 15:28:36	Thread ID: 125773405962880	System.IO.FileNotFoundException: Could not find assembly 'System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e'. Either explicitly load this assembly using a method such as LoadFromAssemblyPath() or use a MetadataAssemblyResolver that returns a valid assembly.
+System.Reflection.TypeLoading.CoreTypes..ctor() in undefined line 0
+System.Reflection.MetadataLoadContext..ctor() in undefined line 0
+ModuleAnalyzer.Core.Analysis.LibraryAnalyzer.PrepareLoadContext() in C:\DEV\GRAFTCODE\graftcode-module-analyzer\src\netcore\ModuleAnalyzer.Core\Analysis\LibraryAnalyzer.cs line 108
+ModuleAnalyzer.Core.Analysis.LibraryAnalyzer.AnalyzeLibrary() in C:\DEV\GRAFTCODE\graftcode-module-analyzer\src\netcore\ModuleAnalyzer.Core\Analysis\LibraryAnalyzer.cs line 56
+ModuleAnalyzer.Core.Handler.ModuleAnalyzerLocal.AnalyzeLocal() in C:\DEV\GRAFTCODE\graftcode-module-analyzer\src\netcore\ModuleAnalyzer.Core\Handler\ModuleAnalyzerLocal.cs line 48
+System.RuntimeMethodHandle.InvokeMethod() in undefined line 0
+System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs() in undefined line 0
+
